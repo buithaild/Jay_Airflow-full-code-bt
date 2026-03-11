@@ -17,6 +17,7 @@ def task_group_eaxample():
 
         @task
         def extract_orders():
+            raise Exception("Intentional failure for UI demo") #  neu co loi
             print("Extracting Orders")
 
         extract_users()
