@@ -1,0 +1,13 @@
+{"timestamp":"2026-03-10T00:42:33.810209Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-03-10T00:42:33.811502Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/taskflow_demo.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-03-10T00:42:33.878515Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-03-10T00:42:33.878948Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-03-10T00:42:33.879505Z","level":"info","event":"Current task name:load","logger":"task.stdout"}
+{"timestamp":"2026-03-10T00:42:33.879845Z","level":"info","event":"Dag name:taskflow_demo","logger":"task.stdout"}
+{"timestamp":"2026-03-10T00:42:33.880720Z","level":"info","event":"Loaded: item- APPLE","logger":"task.stdout"}
+{"timestamp":"2026-03-10T00:42:33.881032Z","level":"info","event":"Loaded: item- BANANA","logger":"task.stdout"}
+{"timestamp":"2026-03-10T00:42:33.881345Z","level":"info","event":"Loaded: item- CHERRY","logger":"task.stdout"}
+{"timestamp":"2026-03-10T00:42:33.881797Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.decorators.python._PythonDecoratedOperator","filename":"python.py","lineno":217}
+{"timestamp":"2026-03-10T00:42:33.909429Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-03-10T00:42:33.909860Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-03-10T00:42:33.910172Z","level":"info","event":"Task operator:<Task(_PythonDecoratedOperator): load>","logger":"task.stdout"}

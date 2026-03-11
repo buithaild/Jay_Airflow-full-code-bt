@@ -1,0 +1,13 @@
+{"timestamp":"2026-03-11T00:06:24.570146Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-03-11T00:06:24.572158Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/operator_demo.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-03-11T00:06:26.131578Z","level":"warning","event":"The `airflow.operators.bash.BashOperator` attribute is deprecated. Please use `'airflow.providers.standard.operators.bash.BashOperator'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/operator_demo.py","lineno":5,"logger":"py.warnings"}
+{"timestamp":"2026-03-11T00:06:26.131757Z","level":"warning","event":"The `airflow.sensors.filesystem.FileSensor` attribute is deprecated. Please use `'airflow.providers.standard.sensors.filesystem.FileSensor'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/operator_demo.py","lineno":6,"logger":"py.warnings"}
+{"timestamp":"2026-03-11T00:06:26.159234Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-03-11T00:06:26.159605Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-03-11T00:06:26.159868Z","level":"info","event":"Current task name:upload_csv_to_gcs","logger":"task.stdout"}
+{"timestamp":"2026-03-11T00:06:26.160083Z","level":"info","event":"Dag name:bash_operator_demo","logger":"task.stdout"}
+{"timestamp":"2026-03-11T00:06:26.172670Z","level":"warning","event":"Connection schemes (type: google_cloud_platform) shall not contain '_' according to RFC3986.","logger":"airflow.sdk.definitions.connection","filename":"connection.py","lineno":130}
+{"timestamp":"2026-03-11T00:06:27.125829Z","level":"info","event":"File /opt/airflow/dags/daily_sales.csv uploaded to demo/daily_sales.csv in airflow-demo-gcs-thaibui bucket","logger":"airflow.task.hooks.airflow.providers.google.cloud.hooks.gcs.GCSHook","filename":"gcs.py","lineno":574}
+{"timestamp":"2026-03-11T00:06:27.141658Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-03-11T00:06:27.142200Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-03-11T00:06:27.142584Z","level":"info","event":"Task operator:<Task(LocalFilesystemToGCSOperator): upload_csv_to_gcs>","logger":"task.stdout"}
