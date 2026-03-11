@@ -4,6 +4,7 @@ from datetime import datetime
 from airflow.sdk import dag
 from airflow.operators.bash import BashOperator
 from airflow.sensors.filesystem import FileSensor
+from airflow.models import Variable
 from airflow.providers.google.cloud.transfers.local_to_gcs import (
     LocalFilesystemToGCSOperator,
 )
@@ -19,10 +20,12 @@ from airflow.providers.google.cloud.transfers.local_to_gcs import (
 
 def bash_operator_demo():
 
+    daily_sales_file_path = Variable.get("daily_sales_file_path")
+
     #1. Define File Sensor
     wait_for_csv = FileSensor(
         task_id="wait_for_daily_sales_csv",
-        filepath="/opt/airflow/dags/daily_sales.csv",
+        filepath=daily_sales_file_path,
         fs_conn_id="fs_default",
         poke_interval=30,
         timeout=360,
@@ -38,7 +41,7 @@ def bash_operator_demo():
     #3. Cloud Operator - upload to GCS
     upload_to_gcs = LocalFilesystemToGCSOperator(
         task_id="upload_csv_to_gcs",
-        src="/opt/airflow/dags/daily_sales.csv",
+        src=daily_sales_file_path, #"	/opt/airflow/dags/daily_sales.csv"
         dst="demo/daily_sales.csv",
         bucket="airflow-demo-gcs-thaibui",
         gcp_conn_id="google_cloud_default"
